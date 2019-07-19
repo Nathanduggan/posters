@@ -25,7 +25,7 @@ SECRET_KEY = 'nty04qq^b@xe(^ynzjgpqxmby-f6^-r5_wktn6^2)stxrk+ho('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [('0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com')]
+ALLOWED_HOSTS = [('http://0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com/',)]
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
+    'accounts',
+    
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,6 @@ ROOT_URLCONF = 'posters.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -99,6 +101,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.CaseInsensitiveAuth']
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -118,3 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MESSAGE_STORAGES = 'django.contrib.messages.storage.session.SessionStorage'
