@@ -25,7 +25,7 @@ SECRET_KEY = 'nty04qq^b@xe(^ynzjgpqxmby-f6^-r5_wktn6^2)stxrk+ho('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [('http://0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com/',)]
+ALLOWED_HOSTS = ['http://0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com/']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'posters.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
