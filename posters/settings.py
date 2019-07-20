@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'nty04qq^b@xe(^ynzjgpqxmby-f6^-r5_wktn6^2)stxrk+ho('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com/']
+ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com']
 
 
 # Application definition
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'accounts',
+    'products',
+    'cart',
     
 ]
 
@@ -57,13 +60,15 @@ ROOT_URLCONF = 'posters.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.templates.context_processors.media',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -124,5 +129,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
 
 MESSAGE_STORAGES = 'django.contrib.messages.storage.session.SessionStorage'
