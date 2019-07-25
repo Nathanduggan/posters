@@ -1,6 +1,6 @@
-language: Pyhton
+language: python
 python:
--"3.4"
-install: 'pip install requirments.txt'
+- "3.4"
+install: "pip install -r requirements.txt"
 script:
-- SECRET_KEY="secretkey" ./manage.py test
+- SECRET_KEY="whatever" ./manage.py test
