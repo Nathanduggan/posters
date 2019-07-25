@@ -1,0 +1,6 @@
+language: Pyhton
+python:
+-"3.4"
+install: 'pip install requirments.txt'
+script:
+- SECRET_KEY="secretkey" ./manage.py test
