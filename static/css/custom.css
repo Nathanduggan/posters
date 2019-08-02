@@ -34,7 +34,7 @@ footer {
 }
 
 .product {
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     width: 150px;
@@ -64,4 +64,15 @@ caption p {
 
 .product-description {
     min-height: 40px;
+    color: rgb(0, 81, 255);
 }
+
+
+
+
+
+
+
+
+
+
