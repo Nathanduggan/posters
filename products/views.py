@@ -8,4 +8,3 @@ def all_products(request):
     contexts = cart_contents(request)
     contexts.update({"products": products})
     return render(request, "products.html", contexts)
-

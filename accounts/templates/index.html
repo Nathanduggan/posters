@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3>Welcome to my AuthenticateMe web application.</h3>
-<p>I'm learning how to build functionality that will allow users to register, login and logout of web applications.</p>
-<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+<h3>Welcome to Superhero Posters.</h3>
+<p class="intro">Here you find some of the best Hero posters from both the Marvel and DC Universe. Are you worthy enough or just a joker?</p>
+<div class="image">
+<img src="media/images/avengers.jpg" height="350" width="320">
+<img src="media/images/batman.jpg" height="350" width="320">
+<img src="media/images/hammer.jpg" height="350" width="320">
+</div>
+<p class="shop"> Click <a href="{% url 'products' %} ">Here</a> to start shopping</p>
+
 {% endblock %}

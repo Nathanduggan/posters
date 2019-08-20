@@ -30,7 +30,7 @@ def login(request):
 
             if user:
                 auth.login(request, user)
-                messages.error(request, "You have successfully logged in")
+                messages.error(request, "You have successfully logged in therefore you are worthy")
 
                 if request.GET and request.GET['next'] !='':
                     next = request.GET['next']
@@ -50,6 +50,11 @@ def login(request):
 def profile(request):
     """A view that displays the profile page of a logged in user"""
     return render(request, 'profile.html')
+
+@login_required
+def support(request):
+    """A view that displays the profile page of a logged in user"""
+    return render(request, 'support.html')   
 
 
 def register(request):
