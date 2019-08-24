@@ -16,8 +16,10 @@ def index(request):
 def logout(request):
     """A view that logs the user out and redirects back to the index page"""
     auth.logout(request)
-    messages.success(request, 'You have successfully logged out')
+    messages.success(request, 'Logout success You have successfully logged out of your Comic Wall account.')
+    
     return render(request, 'products.html')
+    
 
 
 def login(request):
@@ -30,7 +32,7 @@ def login(request):
 
             if user:
                 auth.login(request, user)
-                messages.error(request, "You have successfully logged in therefore you are worthy")
+                messages.error(request, "You have successfully logged in therefore you must worthy")
 
                 if request.GET and request.GET['next'] !='':
                     next = request.GET['next']

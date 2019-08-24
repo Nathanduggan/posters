@@ -1,59 +1,71 @@
-# Student Scribble
+# Posters
 
-# Demo: 'https://student-scribble-app.herokuapp.com/'
+# Demo: 'https://posters-app.herokuapp.com/'
 
 ## The User's
 
-When deciding upon the purpose of my App, I considered creating something that will make it easier for students to keep track of
-homework, assignemnts and projects. I idea is that Students will be able to create accounts and log in each time. They will be able
-to create a list of subjects and then seelct a subject to write a note on. For example, they could create a note that will remond them of what homework
-they have to do for a particular subject, they will be able to select a date and weather or not the note is compete.
-The student will be able to edit notes as they go and delete them once complete. 
+When deciding upon the purpose of my App, I considered creating an app in which users will be able to select a product, add it to a cart and enter payment details.
+Users will also be able to register for an account and log in and log out as they please.
+A username, email and strong passowrd will be required. 
 /*------------------------------*/
 
 ### Features
 #### The Home Page:
-The home page is where the student will see all the notes that they have created.
-From here they can click on the note and a drop down will show them the message.
-They will be able to edit the note or delete the note all from the home page. 
+The home page or index page will open where are the products are. from here users will be able to select a quantity and add to cart.
+From here the user select 'shopping cart' And then checkout, If they are not logged in, They will be redirected to the login screen.
+From the Home screen nav-bar the user can select Register, Log in or Shopping Cart. Once Logged in
+the user can select Profile, Support Log out and Shopping Cart. 
 
-#### The About Page:
-This page will explain what the students need to do in order to successfully use the App.
-From creating an account to setting up subjects. 
- 
 
 #### The Support Page:
-This page will offer support for the students. The student will have to fill out the form with their name and email and what issues
-they are having. 
+Here the user will see a form where they can provide a name, email and also what ever questions or issues they are having and this will be sent via email. 
+From this screen the user will be able to access everything in the nav-bar. They will also be able to select the logo and be brought back to the Home page. 
+ 
 
-#### The Manage Subjects Page:
-This page will list the subjects that the students have added. They will be able to edit subject and also delete the student.
-At the bottom of the page will be an add subject button where the student will be able to add a new subject to the list. 
-
-
-#### The Edit Note Page:
-From the home page the student will be able to click on the edit button which will bring them to another page, On this page will appear
-the original details of the note, such as the subject, the topic, the description and the date if selected.
-Once the student changes the details and clicks edit note then the changes will be saved.
+#### The Profile Page:
+This page will confirm to the user that they are Logged in successfully and what email they are signed in with. 
+The user will also be able to search for whatever product they are looking using the search bar.
+They can also access everything in the nav-bar just like above. 
 
 #### The Login Page:
-This is where the student will have to enter their username and passowrd to access their account.
-If they do not have an account, they can register by click the link. 
+From here the user will be able to Log into their account that would have already Registered for.
+They will have to enter a username or an email and a Password. If they have forgotten their Password they can click on the forgot Password
+link and reset it.
+If the user has come this far but does not already have an account, they can clcik on the Register button in the nav-bar and create an account.  
+
 
 #### The Register Page:
-Here the student will be able to create an account. They will have to enter their name, username and create a password. 
+From the Register Page the user can create an account. They will need to enter a username and follow the required steps.
+They will also need an email address and they will have to create a Password and confirm it also.
+Once they click create account and all thge information is correct and the username of email doesn't already exist, their account
+will be created and they can now log in using those details. 
+If the user finds themselves here but they already have an account, they can click on the sign in link and sign into that account instead. 
+The Passwords will have to match or an error will display.
+Once Registered, The user will be signed in automatically. 
+
+#### The Shopping Cart:
+On this page the user will be able to see everything they have in their basket, An image of the products and also the total cost.
+If they click the checkout button, they will be redirected to a payment method screen.
+
+#### Log out:
+When a user is signed in, they will see the option to Log out in the navigation bar.
+Once they Log out successfully they will see a message on the screen saying so. 
+
+#### The Payment Page:
+Once the user is ready to place their order, they can click on Checkout and they will be redirected to the payment page.
+Here the user will have to enter their details:  Name, address, phone number and card details.
+I have set up the payment method via Stripe so once the user click on submit payment, Stripe will take care of the rest.  
 
 ## Testing.
 
 ##### Navigation Bar:
-   - Go to the Home page.
-   - Across the navigation bar the user can click the add note and create a new note.
-   - Back to the home page again and click the subjects which is also a drop dopwn list, Which contains 'add subjects' And 'Manage subjects.'
-     Both links will bring you to their own page. 
-  -  The Logo and the Home button if clicked will both bring the user back to the home page.
-  -  On the top left of the screen there is a menu option and if selected will display a side-navigation bar.
-     In here the user will be able to navigate to all pages including, adding a note/ subject, about page, support page and also this is
-     where the user most go in order to sign in. 
+Click on the login and file in the details in order to sign in.
+Click on Register and do the same. 
+Whatever screen you are on, click on the logo, 'Comic Wall' And it will bring you back to the Products page. 
+Click on Shopping Cart and see what items are in the Cart. 
+When signed in, click Support in the Navigation bar and fill out the details. 
+Click on Profile and you can see what user is logged in. 
+Click log out and it will render a message letting you know that the user is logged out. 
    
 ##### Social Links: /*-----------------*/
     - Go to the top of the Home page. Click on each of the Social media Links and see that they 
