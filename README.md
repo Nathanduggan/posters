@@ -68,10 +68,8 @@ Click on Profile and you can see what user is logged in.
 Click log out and it will render a message letting you know that the user is logged out. 
    
 ##### Social Links: /*-----------------*/
-    - Go to the top of the Home page. Click on each of the Social media Links and see that they 
-       go to the correct sites. 
-    Next hover over them and they should increase in size.
-    - Repeat these steps on each Page and on the Footer of each Page.
+On each page there will be a like and a Share button, the user can Log into their Facebook Accounts and like the page
+and Share the site. 
     
 
 ##### My Notes:
@@ -109,7 +107,7 @@ Click log out and it will render a message letting you know that the user is log
    - Tested ‘Sign up form’, Links in footer and ‘Read more’ button and all Works.
    - Tablet: Again, fits nicely '768 X 1024'. The Navigation stays the same as Desktop screen.
    - The Footer Links are indented inwards, and I have hidden some text on Mobile and Tablet Screens for display purposes.
-   - All videos, photos and text fit in. Text is centred. 
+   - All photos and text fit in. Text is centred. 
    - I have tested all screens on multiple Browsers, including,
      Google Chrome, Safari, Firefox and Internet Explorer.
 ## Deployment: 
@@ -119,7 +117,7 @@ Click log out and it will render a message letting you know that the user is log
 ## Contents:
    - The Images on each paged are from Google Images.
    - The Navigation bar is from Materialise, Along with the drop down menu for the Notes.
-   - The Side Bar is from Materialise, The icons from Google Icons.
+   - The icons are from Google Icons
  
 
 ## Acknowledgment: 
