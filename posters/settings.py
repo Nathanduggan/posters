@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import env
-import dj-database-url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com', 'localhost']
+ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com', 'localhost', 'posters-solution-code.herokuapp.com',]
 
 
 AUTHENTICATION_BACKENDS = [ 'django.contrib.auth.backends.ModelBackend', 'accounts.backends.CaseInsensitiveAuth']
@@ -90,7 +90,7 @@ DATABASES = {
     }
 }
 
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+# DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
