@@ -1,13 +1,14 @@
-
-
 from django.shortcuts import render, redirect, reverse
+from cart.context import cart_contents
+from django.template.context_processors import media
 
 # Create your views here.
 def view_cart(request):
     """A View that renders the cart contents page"""
-    return render(request, "cart.html")
-
-
+    contexts = media(request)
+    contexts.update(cart_contents(request))
+    return render(request, "cart.html", contexts)
+    
 def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     quantity = int(request.POST.get('quantity'))

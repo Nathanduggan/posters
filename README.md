@@ -70,14 +70,7 @@ Click log out and it will render a message letting you know that the user is log
 ##### Social Links: /*-----------------*/
 On each page there will be a like and a Share button, the user can Log into their Facebook Accounts and like the page
 and Share the site. 
-    
 
-##### My Notes:
-    - From the home screen the user will see the my Notes in the center of the screen after they have 
-      created at 
-      If the user selects the note a drop down will display what message they made, if any of course. 
-      Above will display, the subject,
-      the topic and the Date. They will also be able to delete a edit the note by click on the buttons 
 ##### Support email form:
     - Go to Support page and will out the form.
     - Type in your name. If nothing is entered an error will come after you click the sign-up Button.
@@ -100,7 +93,6 @@ and Share the site.
     - Once they have successfully created an account, they will be redirected to the Login screen page 
       so that they can Login. 
 
-       /*------------------------------*/
 ## How it looks on different screen sizes and browsers:
    - Mobile: The pages fit in nicely, '375 X 667'. The Navigation bar is changed to a Hamburger drop down.
    - Everything else fits in a 'Col-xs-12' Grid including the Footer 
@@ -111,7 +103,7 @@ and Share the site.
    - I have tested all screens on multiple Browsers, including,
      Google Chrome, Safari, Firefox and Internet Explorer.
 ## Deployment: 
-    - I deployed my project on Heroku. Link: https://student-scribble-app.herokuapp.com/
+    - I deployed my project on Heroku. Link: https://posters-app.herokuapp.com/
     - I first ran a git init and started to track my files/images and committed them and then 
       pushed them up to Heroku, were they all open and load with no issues. 
 ## Contents:
