@@ -1,1 +1,1 @@
-web: gunicorn.posters.wsgi:applications
+web: gunicorn posters.wsgi:applications
