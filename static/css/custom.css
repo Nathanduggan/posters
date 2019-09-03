@@ -132,7 +132,7 @@ button {
 }
 
 .glyphicon-euro {
-    color: #000;
+    color: #fafafa;
     padding-bottom: 10px;
 }
 
@@ -172,6 +172,11 @@ button {
       margin-bottom: 20px;
   }
 
+  p {
+      color: #fafafa;
+  }
+
+ 
 
 
 

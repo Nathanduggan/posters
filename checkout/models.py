@@ -1,6 +1,8 @@
 
 from django.db import models
 from products.models import Product
+from cart.context import cart_contents
+from django.template.context_processors import media
 
 # Create your models here.
 class Order(models.Model):

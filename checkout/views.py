@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -7,6 +6,8 @@ from .models import OrderLineItem
 from django.conf import settings
 from django.utils import timezone
 from products.models import Product
+from cart.context import cart_contents
+from django.template.context_processors import media
 import stripe
 
 
