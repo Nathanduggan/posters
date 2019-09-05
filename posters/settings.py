@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com', 'localhost', 'posters-solution-code.herokuapp.com', 'posters-app.herokuapp.com',]
+ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com', 'localhost', 'posters-solution-code.herokuapp.com', 'posters-app.herokuapp.com', 'https://posters-app.herokuapp.com/admin/login/']
 
 
 AUTHENTICATION_BACKENDS = [ 'django.contrib.auth.backends.ModelBackend', 'accounts.backends.CaseInsensitiveAuth']
