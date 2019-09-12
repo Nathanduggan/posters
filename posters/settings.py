@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com', 'localhost', 'posters-solution-code.herokuapp.com', 'posters-app.herokuapp.com', 'https://posters-app.herokuapp.com/admin/login/']
+ALLOWED_HOSTS = ['0a87fe7fa9aa43f2a750b77f1357eb1e.vfs.cloud9.us-east-1.amazonaws.com', 'localhost', 'posters-solution-code.herokuapp.com', 'posters-app.herokuapp.com',]
 
 
 AUTHENTICATION_BACKENDS = [ 'django.contrib.auth.backends.ModelBackend', 'accounts.backends.CaseInsensitiveAuth']
@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'posters.urls'
@@ -143,8 +144,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     )
-
-STATIC_ROOT = '/static/'  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
