@@ -32,7 +32,7 @@ def login(request):
 
             if user:
                 auth.login(request, user)
-                messages.error(request, "You have successfully logged in therefore you must worthy")
+                messages.error(request, "You have successfully logged in therefore you must be worthy")
 
                 if request.GET and request.GET['next'] !='':
                     next = request.GET['next']
