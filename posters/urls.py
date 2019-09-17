@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
-    # url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
+    # url(r'^media/(?P<path>.*)$', static.server, {'document_root': MEDIA_ROOT})
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
